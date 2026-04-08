@@ -7,12 +7,12 @@ const categoryIconMap = {
 기타: "/category-etc.png",
 };
 
-export default function RestaurantList({ restaurants }) {
+export default function RestaurantList({ restaurants, onClickRestaurant }) {
   return (
     <section className="restaurant-list-container">
       <ul className="restaurant-list">
         {restaurants.map((restaurant) => (
-          <li key={restaurant.id} className="restaurant">
+          <li key={restaurant.id} className="restaurant" onClick={() => onClickRestaurant(restaurant)}>
             <div className="restaurant__category">
               <img src={categoryIconMap[restaurant.category]} alt={restaurant.category} className="category-icon" />
             </div>
