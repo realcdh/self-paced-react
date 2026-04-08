@@ -1,6 +1,6 @@
 export default function CategoryFilter() {
     return (
-        <section class="restaurant-filter-container">
+        <section className="restaurant-filter-container">
       <select name="category" id="category-filter" class="restaurant-filter" aria-label="음식점 카테고리 필터">
         <option value="전체">전체</option>
         <option value="한식">한식</option>
