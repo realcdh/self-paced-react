@@ -60,7 +60,7 @@ function App() {
     );
   }
 
-  const handlerOpenModal = (restaurant) => {
+  const handleOpenModal = (restaurant) => {
     setSelectedRestaurant(restaurant);
     setIsModalOpen(true);
   }
@@ -70,7 +70,7 @@ function App() {
       <Header />
       <main>
         <CategoryFilter category={category} onChangeCategory={setCategory} />
-        <RestaurantList restaurants={filteredRestaurants} onClickRestaurant={handlerOpenModal} />
+        <RestaurantList restaurants={filteredRestaurants} onClickRestaurant={handleOpenModal} />
       </main>
       <aside>
         {isModalOpen && <RestaurantDetailModal restaurant={selectedRestaurant} setIsModalOpen={setIsModalOpen} />}
