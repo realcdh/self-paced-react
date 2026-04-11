@@ -12,7 +12,8 @@ export default function RestaurantList({ restaurants, onClickRestaurant }) {
     <section className="restaurant-list-container">
       <ul className="restaurant-list">
         {restaurants.map((restaurant) => (
-          <li key={restaurant.id} className="restaurant" onClick={() => onClickRestaurant(restaurant)}>
+          <li key={restaurant.id} className="restaurant" onClick={() => onClickRestaurant(restaurant)}
+          role="button" tabIndex={0}>
             <div className="restaurant__category">
               <img src={categoryIconMap[restaurant.category]} alt={restaurant.category} className="category-icon" />
             </div>
