@@ -51,7 +51,7 @@ const restaurants = [
 function App() {
   const [category, setCategory] = useState("전체");
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [selectedRestaurant, setSelectedRestaurant] = useState({});
+  const [selectedRestaurant, setSelectedRestaurant] = useState(null);
 
   let filteredRestaurants = restaurants;
   if (category !== "전체") {
