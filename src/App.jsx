@@ -66,6 +66,11 @@ function App() {
 		setIsModalOpen(true);
 	};
 
+	const handleCloseModal = () => {
+		setIsModalOpen(false);
+		setSelectedRestaurant(null);
+	};
+
 	return (
 		<>
 			<Header />
@@ -83,7 +88,7 @@ function App() {
 				{isModalOpen && (
 					<RestaurantDetailModal
 						restaurant={selectedRestaurant}
-						setIsModalOpen={setIsModalOpen}
+						onClose={handleCloseModal}
 					/>
 				)}
 				{/* <AddRestaurantModal /> */}
