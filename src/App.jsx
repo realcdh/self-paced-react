@@ -73,7 +73,7 @@ function App() {
         <RestaurantList restaurants={filteredRestaurants} onClickRestaurant={handlerOpenModal} />
       </main>
       <aside>
-        {isModalOpen && <RestaurantDetailModal restaurant={selectedRestaurant} isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />}
+        {isModalOpen && <RestaurantDetailModal restaurant={selectedRestaurant} setIsModalOpen={setIsModalOpen} />}
         {/* <AddRestaurantModal /> */}
       </aside>
     </>

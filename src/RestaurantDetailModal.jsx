@@ -1,4 +1,4 @@
-export default function RestaruantDetailModal({ restaurant, isModalOpen, setIsModalOpen }) {
+export default function RestaurantDetailModal({ restaurant, setIsModalOpen }) {
     return (
         <div className="modal modal--open">
       <div className="modal-backdrop"></div>
