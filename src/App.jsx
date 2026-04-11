@@ -53,12 +53,7 @@ function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedRestaurant, setSelectedRestaurant] = useState(null);
 
-  let filteredRestaurants = restaurants;
-  if (category !== "전체") {
-    filteredRestaurants = restaurants.filter(
-      (restaurant) => restaurant.category === category
-    );
-  }
+  const filteredRestaurants = category === "전체" ? restaurants : restaurants.filter((restaurant) => restaurant.category === category);
 
   const handleOpenModal = (restaurant) => {
     setSelectedRestaurant(restaurant);
