@@ -1,4 +1,4 @@
-const categoryIconMap = {
+const CATEGORYICONMAP = {
 한식: "/category-korean.png",
 중식: "/category-chinese.png",
 일식: "/category-japanese.png",
@@ -15,7 +15,7 @@ export default function RestaurantList({ restaurants, onClickRestaurant }) {
           <li key={restaurant.id} className="restaurant" onClick={() => onClickRestaurant(restaurant)}
           role="button" tabIndex={0}>
             <div className="restaurant__category">
-              <img src={categoryIconMap[restaurant.category]} alt={restaurant.category} className="category-icon" />
+              <img src={CATEGORYICONMAP[restaurant.category]} alt={restaurant.category} className="category-icon" />
             </div>
             <div className="restaurant__info">
               <h3 className="restaurant__name text-subtitle">{restaurant.name}</h3>
