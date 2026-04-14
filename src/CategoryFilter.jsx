@@ -1,4 +1,4 @@
-const categories = ['전체', '한식', '중식', '일식', '양식', '아시안', '기타'];
+const CATEGORIES = ['전체', '한식', '중식', '일식', '양식', '아시안', '기타'];
 
 export default function CategoryFilter({ category, onChangeCategory }) {
 	return (
@@ -10,7 +10,7 @@ export default function CategoryFilter({ category, onChangeCategory }) {
 				aria-label="음식점 카테고리 필터"
 				value={category}
 				onChange={e => onChangeCategory(e.target.value)}>
-				{categories.map(category => (
+				{CATEGORIES.map(category => (
 					<option key={category} value={category}>
 						{category}
 					</option>
